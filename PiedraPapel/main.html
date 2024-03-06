@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>El juego de Sheldon</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+
+<body onclick="iniciarCancion()">
+    <div class="area">
+
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <h1 class="hola">BIENVENIDO</h1>
+
+        <P class="jugada" id="jugada">Selecciona tu jugada: </P>
+        <div class="botonera">
+
+            <img id="piedra" class="boton" src="Imagenes/piedra.png" onclick="seleccion(0)"></img>
+            <img id="papel" class="boton" src="Imagenes/papel.png" onclick="seleccion(1)"></img>
+            <img id="tijera" class="boton" src="Imagenes/tijeras.png" onclick="seleccion(2)"></img>
+            <img id="lagarto" class="boton" src="Imagenes/lagarto.png" onclick="seleccion(3)"></img>
+            <img id="spock" class="boton" src="Imagenes/spock.png" onclick="seleccion(4)"></img>
+
+        </div>
+        <div>
+            <button id="enviar" class="boton" onclick="seleccion(5)"> ENVIAR </button>
+        </div>
+        <h4 id="resultado" class="resultado">Selecciona una jugada y enviala.</h4>
+
+        <div class="user">
+            <h6>TÚ</h6>
+            <H1 id="user">0</H1>
+        </div>
+        <div class="ia">
+            <h6>IA</h6>
+            <h1 id="ia">0</h1>
+            <p id="seleccionIA"></p>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

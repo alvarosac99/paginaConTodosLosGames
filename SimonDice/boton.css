@@ -1,0 +1,24 @@
+.botonNormal {
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #8516e6;
+    padding: 10px 30px;
+    margin: 10px;
+    border: solid #000000 2px;
+    box-shadow: rgb(0, 0, 0) 0px 10px 10px -10px;
+    border-radius: 32px;
+    transition: 330ms;
+    transform: translateY(0);
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.botonNormal:hover {
+    transition: 330ms;
+    padding: 10px 32px;
+    transform: translateY(-0px);
+    background-color: #bf6eeb;
+    color: #ffffff;
+    border: solid 2px #8821e3;
+}

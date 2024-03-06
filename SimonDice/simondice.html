@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Dice</title>
+    <script src="main.js"></script>
+    <script src="casos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boton.css">
+
+    <style>
+        body {
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            user-select: none;
+        }
+
+        .boton {
+            margin: 5px;
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            border-radius: 20px;
+            background: #ffffff;
+        }
+
+        #verde {
+            background: hsl(120, 100%, 25%);
+        }
+
+        #rojo {
+            background: hsl(0, 100%, 25%);
+        }
+
+        #amarillo {
+            background: hsl(60, 100%, 25%);
+        }
+
+        #azul {
+            background: hsl(240, 100%, 25%);
+        }
+
+        .boton:hover {
+            box-shadow: 0 3px #ffffff;
+            top: 1px;
+        }
+
+        .boton:active {
+            box-shadow: 0 0 #ffffff;
+            top: 5px;
+            background: #ffffff;
+        }
+
+        .loquesea {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #juego {
+            align-items: center;
+            border-radius: 20px;
+            max-width: fit-content;
+            background: rgb(0, 0, 0);
+        }
+
+        .titulo {
+            color: rgb(34, 1, 65);
+            font-family: sans-serif;
+            font-size: xx-large;
+            background-color: rgba(255, 255, 255, 0.082);
+        }
+    </style>
+
+
+
+</head>
+
+<body onload="mostrarJuego()">
+
+    <div class="area">
+
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="titulo">
+            <h1>SIMON DICE</h1>
+        </div>
+        <button class="botonNormal" id="comienzo" onclick="juego()">EMPEZAR</button>
+        <div class="loquesea">
+            <div id="juego"></div>
+        </div>
+        <div>
+            <p class="puntuacion" id="puntos">Puntos: 0</p>
+            <p class="puntuacion" id="rondas">Ronda: 0</p>
+        </div>
+    </div>
+</body>
+
+</html>

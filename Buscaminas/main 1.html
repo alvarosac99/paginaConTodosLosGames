@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Plantilla</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: larger;
+        }
+
+
+
+        .boton {
+            text-align: center;
+            margin: 5px;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            background: #3c338c;
+        }
+
+        .boton:hover {
+            box-shadow: 0 3px #2c0b8e;
+            top: 1px;
+        }
+
+        .boton:active {
+            box-shadow: 0 0 #2c0b8e;
+            top: 5px;
+            background: #2c0b8e;
+        }
+    </style>
+
+    <script>
+        var terreno = [];
+        var vidas = 3;
+        var tamanio = 10;
+
+        function mostrarJuego() {
+            vidas = 3;
+            document.getElementById("vidas").innerHTML = "vidas: " + vidas;
+            document.getElementById("reinicio").innerHTML = "Reiniciar";
+            var resultado = document.getElementById("juego");
+            resultado.innerHTML = "";
+            rellenar();
+
+            for (var i = 0; i < terreno.length; i++) {
+                for (var j = 0; j < terreno[i].length; j++) {
+                    resultado.innerHTML += '<button class="boton" onclick="jugar(event, ' + i + ',' + j + ')">' + /*terreno[i][j]+*/  "" + '</button>';
+                }
+                resultado.innerHTML += "<br>";
+            }
+
+        }
+
+        function rellenar() {
+            for (var i = 0; i < tamanio; i++) {
+                terreno[i] = [];
+                for (var j = 0; j < tamanio; j++) {
+                    var num = Math.floor(Math.random() * 10);
+                    if (num == 1) {
+                        terreno[i][j] = "BUM";
+                    } else {
+                        terreno[i][j] = "N";
+                    }
+                }
+            }
+
+            for (var i = 0; i < terreno.length; i++) {
+                for (var j = 0; j < terreno[i].length; j++) {
+                    if (terreno[i][j] == "N") {
+                        var contador = 0;
+
+                        for (var x = -1; x <= 1; x++) {
+                            for (var y = -1; y <= 1; y++) {
+                                var x1 = i + x;
+                                var y1 = j + y;
+
+                                if (x1 >= 0 && x1 < terreno.length && y1 >= 0 && y1 < terreno[i].length) {
+                                    if (terreno[x1][y1] == "BUM") {
+                                        contador++;
+                                    }
+                                }
+                            }
+                        }
+                        if (contador > 0) {
+                            terreno[i][j] = "!!!";
+                        } else {
+                            terreno[i][j] = "???";
+                        }
+                    }
+                }
+            }
+        }
+
+        function jugar(event, i, j) {
+            var clic = event.target;
+            switch (terreno[i][j]) {
+                case "!!!":
+                    clic.style.backgroundColor = "yellow";
+                    break;
+                case "???":
+                    clic.style.backgroundColor = "white";
+                    for (var x = -1; x <= 1; x++) {
+                        for (var y = -1; y <= 1; y++) {
+                            var x1 = i + x;
+                            var y1 = j + y;
+
+                            if (x1 >= 0 && x1 < terreno.length && y1 >= 0 && y1 < terreno[i].length) {
+                                if (terreno[x1][y1] == "???") {
+                                    var adyacente = document.querySelector('[onclick="jugar(event, ' + x1 + ',' + y1 + ')"]');
+                                    adyacente.style.backgroundColor = "white";
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case "BUM":
+                    vidas -= 1
+                    document.getElementById("vidas").innerHTML = "vidas: " + vidas;
+                    clic.style.backgroundColor = "red";
+                    if (vidas <= -1) {
+                        alert("¡BUM! ¡Perdiste!");
+                        mostrarJuego();
+                    }
+
+            }
+
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>BUSCAMINAS</h1>
+    <p id="vidas">vidas: 3</p>
+    <button id="reinicio" onclick="mostrarJuego()">Mostrar</button>
+    <div id="juego"></div>
+</body>
+
+</html>
