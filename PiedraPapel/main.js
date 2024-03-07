@@ -2,10 +2,20 @@ var seleccionUser;
 var seleccionIA;
 var resultado;
 var jugadasRestantes = 0, contadorIA = 0, contadorUser = 0;
+var juegoIniciado= false
 
-do {
-    jugadasRestantes = prompt("Al mejor de cuanto?")
-} while (jugadasRestantes < 1 || isNaN(jugadasRestantes))
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        solicitarJugadasRestantes();
+    }, 1);
+});
+
+function solicitarJugadasRestantes() {
+    do {
+        jugadasRestantes = prompt("Al mejor de cuanto?");
+    } while (jugadasRestantes < 1 || isNaN(jugadasRestantes));
+}
+
 
 /*  ANTIGUO CODIGO
 
@@ -99,8 +109,9 @@ function seleccion(boton) {
 function volverAJugar() {
     var seleccion = confirm("¿Volver a jugar?");
     if (seleccion) {
-        contadorIA = 0; contadorUser = 0;
-
+        contadorIA = 0;
+        contadorUser = 0;
+        juegoIniciado = false;
         do {
             jugadasRestantes = prompt("Al mejor de cuanto?")
         } while (jugadasRestantes < 1 || isNaN(jugadasRestantes))

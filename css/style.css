@@ -110,6 +110,23 @@
     animation-duration: 11s;
 }
 
+.atras {
+    z-index: 3;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    top: -10px;
+    cursor: pointer;
+}
+
+.atras:hover{
+    top: -12px;
+}
+.atras:active{
+    top:-11px
+}
+
 
 
 @keyframes animate {

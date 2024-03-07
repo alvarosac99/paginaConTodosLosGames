@@ -4,15 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Plantilla</title>
+    <title>Busca Mingas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
 
     <style>
         body {
+            align-items: center;
             text-align: center;
             font-size: larger;
+            user-select: none;
         }
 
-
+        .titulo {
+            position: relative;
+            color: #2b2469;
+            background-color: #ffffff21;
+            font-family: sans-serif;
+            font-size: xx-large;
+            flex-direction: row;
+        }
 
         .boton {
             text-align: center;
@@ -30,6 +41,10 @@
             border-radius: 5px;
             border: none;
             background: #3c338c;
+        }
+
+        #reinicio{
+            width: 100px;
         }
 
         .boton:hover {
@@ -148,9 +163,29 @@
 </head>
 
 <body>
-    <h1>BUSCAMINAS</h1>
+
+    <div class="area">
+        <div class="titulo">
+            <h1>BUSCAMINAS</h1>
+        </div>
+
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    <img class="atras" src="../SourceComp/flechaAtras.png" onclick="location.href='../Principal/Principal.html'">
+    
     <p id="vidas">vidas: 3</p>
-    <button id="reinicio" onclick="mostrarJuego()">Mostrar</button>
+    <button class="boton" id="reinicio" onclick="mostrarJuego()">Mostrar</button>
     <div id="juego"></div>
 </body>
 
