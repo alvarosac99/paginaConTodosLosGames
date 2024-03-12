@@ -1,10 +1,8 @@
 {
     "es": {
-        "titulo": "JUEGUITOS",
-        "desc": "Descripción de prueba"
+        "titulo": "JUEGUITOS"
     },
     "en": {
-        "titulo": "LITTLE GAMES",
-        "desc": "Description test"
+        "titulo": "LITTLE GAMES"
     }
 }
