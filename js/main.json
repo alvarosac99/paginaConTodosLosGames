@@ -1,8 +1,10 @@
 {
     "es": {
-        "titulo": "JUEGUITOS"
+        "titulo": "JUEGUITOS",
+        "tituloPiedraPapel": "PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK"
     },
     "en": {
-        "titulo": "LITTLE GAMES"
+        "titulo": "LITTLE GAMES",
+        "tituloPiedraPapel": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK"
     }
 }
