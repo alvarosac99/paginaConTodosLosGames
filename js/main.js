@@ -13,7 +13,7 @@ document.getElementById('selector_idioma').addEventListener('change', function (
 });
 
 function aplicarTraducciones(idioma) {
-    fetch('main.json')
+    fetch('../js/main.json')
         .then(response => response.json())
         .then(traducciones => {
             document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
