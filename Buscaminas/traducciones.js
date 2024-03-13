@@ -1,4 +1,4 @@
-idioma = localStorage.getItem('idioma')
+var idioma = localStorage.getItem('idioma')
 fetch('main.json')
     .then(response => response.json())
     .then(traducciones => {
