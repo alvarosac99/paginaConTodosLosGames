@@ -2,10 +2,10 @@ var seleccionUser;
 var seleccionIA;
 var resultado;
 var jugadasRestantes = 0, contadorIA = 0, contadorUser = 0;
-var juegoIniciado= false
+var juegoIniciado = false
 
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
         solicitarJugadasRestantes();
     }, 1);
 });
@@ -143,5 +143,3 @@ function iniciarCancion() {
         reproduciendo = true;
     }
 }
-
-<script src="../js/main.js"></script>
