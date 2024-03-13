@@ -1,8 +1,4 @@
 var idiomaAlmacenado = localStorage.getItem('idioma');
-if (idiomaAlmacenado) {
-    aplicarTraducciones(idiomaAlmacenado);
-    document.getElementById('selector_idioma').value = idiomaAlmacenado;
-}
 
 document.getElementById('selector_idioma').addEventListener('change', function () {
     var idiomaSeleccionado = this.value;
