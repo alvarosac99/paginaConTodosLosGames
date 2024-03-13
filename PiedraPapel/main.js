@@ -143,3 +143,5 @@ function iniciarCancion() {
         reproduciendo = true;
     }
 }
+
+<script src="../js/main.js"></script>

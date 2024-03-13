@@ -10,14 +10,11 @@ document.getElementById('selector_idioma').addEventListener('change', function (
     aplicarTraducciones(idiomaSeleccionado);
 });
 
-function aplicarTraducciones(idioma) {
-    idioma = localStorage.getItem('idioma')
-    fetch('../js/main.json')
-        .then(response => response.json())
-        .then(traducciones => {
-            document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
-            document.getElementById('tituloPiedraPapel').innerHTML = traducciones[idioma].tituloPiedraPapel;
-
-        })
-        .catch(error => console.error('Error al cargar el archivo JSON:', error));
-}
+idioma = localStorage.getItem('idioma')
+fetch('../js/main.json')
+    .then(response => response.json())
+    .then(traducciones => {
+        document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
+        document.getElementById('tituloPiedraPapel').innerHTML = traducciones[idioma].tituloPiedraPapel;
+    })
+    .catch(error => console.error('Error al cargar el archivo JSON:', error));
