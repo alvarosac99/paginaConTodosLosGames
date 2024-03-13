@@ -147,7 +147,7 @@
                     break;
                 case "BUM":
                     vidas -= 1
-                    document.getElementById("vidas").innerHTML = 'main.json'[idioma].titulo + vidas;
+                    document.getElementById("vidas").innerHTML = "vidas: " + vidas;
                     clic.style.backgroundColor = "red";
                     if (vidas <= -1) {
                         alert("¡BUM! ¡Perdiste!");

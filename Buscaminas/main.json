@@ -1,9 +1,11 @@
 {
     "es": {
-        "titulo": "BUSCAMINAS"
+        "titulo": "BUSCAMINAS",
+        "vidas": "vidas: "
     },
     "en": {
-        "titulo": "MINESWEEPER"
+        "titulo": "MINESWEEPER",
+        "vidas": "lives: "
     }
 
 }

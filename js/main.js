@@ -16,5 +16,6 @@ fetch('main.json')
     .then(traducciones => {
         document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
         document.getElementById('tituloPiedraPapel').innerHTML = traducciones[idioma].tituloPiedraPapel;
+        
     })
     .catch(error => console.error('Error al cargar el archivo JSON:', error));
