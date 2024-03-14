@@ -10,10 +10,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1);
 });
 
+var empateTexto
+var perderTexto
+var ganarTexto
+var resultadoTexto
+var piedraTexto
+var papelTexto
+var tijerasTexto
+var lagartoTexto
+var volverAJugarTexto
+var preguntaTexto
+
+
 function solicitarJugadasRestantes() {
-    do {
-        jugadasRestantes = prompt("Al mejor de cuanto?");
-    } while (jugadasRestantes < 1 || isNaN(jugadasRestantes));
+    var idioma = localStorage.getItem('idioma');
+    if (!idioma) {
+        idioma = 'es';
+        localStorage.setItem('idioma', idioma);
+    }
+
+    fetch('main.json')
+        .then(response => response.json())
+        .then(traducciones => {
+
+            preguntaTexto = traducciones[idioma].pregunta;
+            do {
+                jugadasRestantes = prompt(preguntaTexto);
+            } while (jugadasRestantes < 1 || isNaN(jugadasRestantes));
+
+            document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
+            document.getElementById('jugada').innerHTML = traducciones[idioma].jugada;
+            document.getElementById('enviar').innerHTML = traducciones[idioma].enviar;
+            document.getElementById('resultado').innerHTML = traducciones[idioma].resultado;
+            document.getElementById('tu').innerHTML = traducciones[idioma].tu;
+            empateTexto = traducciones[idioma].empate;
+            perderTexto = traducciones[idioma].perder;
+            ganarTexto = traducciones[idioma].ganar;
+            resultadoTexto = traducciones[idioma].resultado2;
+            piedraTexto = traducciones[idioma].piedra;
+            papelTexto = traducciones[idioma].papel;
+            tijerasTexto = traducciones[idioma].tijeras;
+            lagartoTexto = traducciones[idioma].lagarto;
+            volverAJugarTexto = traducciones[idioma].volverAJugar;
+
+        })
+        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+
 }
 
 
@@ -46,16 +88,15 @@ function ia() {
 }
 
 function ganador() {
-
     if (plantilla[seleccionUser][seleccionIA] == "0") {
-        resultado = "EMPATE";
+        resultado = empateTexto;
         jugadasRestantes--
     } else if (plantilla[seleccionUser][seleccionIA] == "-1") {
-        resultado = "IA GANA";
+        resultado = perderTexto;
         contadorIA++
         jugadasRestantes--
     } else if (plantilla[seleccionUser][seleccionIA] == "1") {
-        resultado = "USUARIO GANA";
+        resultado = ganarTexto;
         contadorUser++
         jugadasRestantes--
     }
@@ -68,16 +109,14 @@ function ganador() {
 
     if (jugadasRestantes == 0) {
         if (contadorIA < contadorUser) {
-            cambiar('resultado', "GANASTE LA PARTIDA!!")
+            cambiar('resultado', ganarTexto)
         } else if (contadorIA == contadorUser) {
-            cambiar('resultado', "EMPATE");
+            cambiar('resultado', empateTexto);
         } else {
-            cambiar('resultado', "PERDISTE LA PARTIDA :C");
+            cambiar('resultado', perderTexto);
         }
         setTimeout('volverAJugar()', 50);
     }
-
-
 
 }
 
@@ -107,13 +146,13 @@ function seleccion(boton) {
 }
 
 function volverAJugar() {
-    var seleccion = confirm("¿Volver a jugar?");
+    var seleccion = confirm(volverAJugarTexto);
     if (seleccion) {
         contadorIA = 0;
         contadorUser = 0;
         juegoIniciado = false;
         do {
-            jugadasRestantes = prompt("Al mejor de cuanto?")
+            jugadasRestantes = prompt(preguntaTexto)
         } while (jugadasRestantes < 1 || isNaN(jugadasRestantes))
 
     } else {
@@ -123,18 +162,18 @@ function volverAJugar() {
 
 function jugadas(jugador, cambio) {
     switch (jugador) {
-        case 0: cambiar(cambio, "Selección: piedra"); break;
-        case 1: cambiar(cambio, "Selección: papel"); break;
-        case 2: cambiar(cambio, "Selección: tijera"); break;
-        case 3: cambiar(cambio, "Selección: lagarto"); break;
-        case 4: cambiar(cambio, "Selección: spock"); break;
+        case 0: cambiar(cambio, resultadoTexto + piedraTexto); break;
+        case 1: cambiar(cambio, resultadoTexto + papelTexto); break;
+        case 2: cambiar(cambio, resultadoTexto + tijerasTexto); break;
+        case 3: cambiar(cambio, resultadoTexto + lagartoTexto); break;
+        case 4: cambiar(cambio, resultadoTexto + "spock"); break;
     }
 }
 
 function resetear() {
 
 }
-reproduciendo = false
+reproduciendo = true
 function iniciarCancion() {
     var audio = new Audio('MusicaRara.mp3');
     audio.loop = true;

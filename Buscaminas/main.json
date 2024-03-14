@@ -1,11 +1,17 @@
 {
     "es": {
         "titulo": "BUSCAMINAS",
-        "vidas": "vidas: "
+        "vidas": "vidas: ",
+        "perder": "BUM!!, PERDISTE",
+        "reinicio": "MOSTRAR",
+        "reinicio2": "REINICIAR"
     },
     "en": {
         "titulo": "MINESWEEPER",
-        "vidas": "lives: "
+        "vidas": "lives: ",
+        "perder": "BUM!!, YOU LOSE",
+        "reinicio": "SHOW",
+        "reinicio2": "RESET"
     }
 
 }

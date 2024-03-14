@@ -1,9 +1,37 @@
 {
     "es": {
-        "titulo": "PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK"
+        "titulo": "PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK",
+        "jugada": "Selecciona tu jugada: ",
+        "enviar": "ENVIAR",
+        "resultado": "selecciona tu jugada y enviala",
+        "resultado2": "selección: ",
+        "tu": "TÚ",
+        "piedra": "piedra",
+        "papel": "papel",
+        "tijeras": "tijeras",
+        "lagarto": "lagarto",
+        "empate": "EMPATE",
+        "perder": "PERDISTE",
+        "ganar": "GANASTE",
+        "volverAJugar": "FIN DE LA PARTIDA | ¿Volver a jugar?",
+        "pregunta": "Al mejor de cuanto?"
+
     },
     "en": {
-        "titulo": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK"
+        "titulo": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK",
+        "jugada": "Select your play: ",
+        "enviar": "PLAY",
+        "resultado": "Select a play and go: ",
+        "resultado2": "select: ",
+        "tu": "YOU",
+        "piedra": "rock",
+        "papel": "paper",
+        "tijeras": "scissors",
+        "lagarto": "lizard",
+        "empate": "DRAW",
+        "perder": "YOU LOSE",
+        "ganar": "YOU WIN",
+        "volverAJugar": "GAME OVER | Play again?",
+        "pregunta": "At best?"
     }
-
 }

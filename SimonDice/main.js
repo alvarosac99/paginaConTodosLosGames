@@ -1,6 +1,19 @@
 var puntos = 0;
 var rondas = 0;
 
+var idioma = localStorage.getItem('idioma');
+if (!idioma) {
+    idioma = 'es';
+    localStorage.setItem('idioma', idioma);
+}
+fetch('main.json')
+    .then(response => response.json())
+    .then(traducciones => { 
+        
+        
+    })
+
+
 function actualizar() {
     document.getElementById("rondas").innerHTML = "Ronda: " + rondas;
     document.getElementById("puntos").innerHTML = "Puntos: " + puntos;

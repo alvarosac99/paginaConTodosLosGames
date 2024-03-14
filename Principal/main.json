@@ -1,10 +1,16 @@
 {
     "es": {
         "titulo": "JUEGUITOS",
-        "tituloPiedraPapel": "PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK"
+        "tituloPiedraPapel": "PIEDRA, PAPEL, TIJERA, LAGARTO, SPOCK",
+        "tituloBuscaminas": "BUSCAMINAS",
+        "tituloSimonDice": "SIMON DICE",
+        "tituloHistoria": "HISTORIA"
     },
     "en": {
         "titulo": "TINY GAMES",
-        "tituloPiedraPapel": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK"
+        "tituloPiedraPapel": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK",
+        "tituloBuscaminas": "MINESWEEPER",
+        "tituloSimonDice": "SIMON SAYS",
+        "tituloHistoria": "HISTORY"
     }
 }
