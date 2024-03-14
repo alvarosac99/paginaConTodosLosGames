@@ -6,17 +6,23 @@ if (!idioma) {
     idioma = 'es';
     localStorage.setItem('idioma', idioma);
 }
+
+var puntosTexto;
+var rondaTexto;
 fetch('main.json')
     .then(response => response.json())
-    .then(traducciones => { 
-        
-        
+    .then(traducciones => {
+        document.getElementById('titulo').innerHTML = traducciones[idioma].titulo;
+        document.getElementById('comienzo').innerHTML = traducciones[idioma].comienzo;
+        rondaTexto = traducciones[idioma].ronda
+        puntosTexto = traducciones[idioma].puntos
+        actualizar();
     })
 
 
 function actualizar() {
-    document.getElementById("rondas").innerHTML = "Ronda: " + rondas;
-    document.getElementById("puntos").innerHTML = "Puntos: " + puntos;
+    document.getElementById("rondas").innerHTML = rondaTexto + rondas;
+    document.getElementById("puntos").innerHTML = puntosTexto + puntos;
 }
 
 async function apagar(id) {

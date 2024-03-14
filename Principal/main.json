@@ -12,5 +12,33 @@
         "tituloBuscaminas": "MINESWEEPER",
         "tituloSimonDice": "SIMON SAYS",
         "tituloHistoria": "HISTORY"
+    },
+    "fr": {
+        "titulo": "JEUX MINUSCULES",
+        "tituloPiedraPapel": "ROCHER, PAPIER, CISEAUX, LÉZARD, SPOCK",
+        "tituloBuscaminas": "DEMINES",
+        "tituloSimonDice": "SIMON DIT",
+        "tituloHistoria": "HISTOIRE"
+    },
+    "de": {
+        "titulo": "KLEINE SPIELE",
+        "tituloPiedraPapel": "STEIN, PAPIER, SCHERE, EIDECHSE, SPOCK",
+        "tituloBuscaminas": "MINENFELD",
+        "tituloSimonDice": "SIMON SAGT",
+        "tituloHistoria": "GESCHICHTE"
+    },
+    "it": {
+        "titulo": "GIOCHINI",
+        "tituloPiedraPapel": "ROCCIA, CARTA, FORBICI, LUCERTOLA, SPOCK",
+        "tituloBuscaminas": "CAMPO MINATO",
+        "tituloSimonDice": "SIMON DICE",
+        "tituloHistoria": "STORIA"
+    },
+    "is": {
+        "titulo": "LEIKIR",
+        "tituloPiedraPapel": "STEINN, PAPPÍR, SKOÐUN, LAGUR, SPOCK",
+        "tituloBuscaminas": "MÍNUSPILARI",
+        "tituloSimonDice": "SIMON SEGIR",
+        "tituloHistoria": "SÖGULEGAR ATHUGANIR"
     }
 }

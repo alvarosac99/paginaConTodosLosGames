@@ -1,0 +1,38 @@
+{
+    "es": {
+        "titulo": "SIMON DICE",
+        "puntos": "puntos: ",
+        "ronda": "ronda: ",
+        "comienzo": "COMENZAR"
+    },
+    "en": {
+        "titulo": "SIMON SAYS",
+        "puntos": "points: ",
+        "ronda": "round: ",
+        "comienzo": "START"
+    },
+    "fr": {
+        "titulo": "SIMON DIT",
+        "puntos": "points: ",
+        "ronda": "tour: ",
+        "comienzo": "DÉBUT"
+    },
+    "de": {
+        "titulo": "SIMON SAGT",
+        "puntos": "punkte: ",
+        "ronda": "runde: ",
+        "comienzo": "STARTEN"
+    },
+    "it": {
+        "titulo": "SIMON DICE",
+        "puntos": "punti: ",
+        "ronda": "round: ",
+        "comienzo": "INIZIO"
+    },
+    "is": {
+        "titulo": "SIMON SEGIR",
+        "puntos": "stig: ",
+        "ronda": "umferð: ",
+        "comienzo": "BYRJA"
+    }
+}
