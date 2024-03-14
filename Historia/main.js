@@ -1,15 +1,13 @@
 var posicionActual = 0;
-var textos = []; 
+var textos = [];
 
-var idioma = localStorage.getItem('idioma') || 'es'; 
-fetch('main.json')
+var idioma = localStorage.getItem('idioma') || 'es';
+fetch('mainJugable.json')
     .then(response => response.json())
     .then(partes => {
         var traducciones = partes[idioma];
-        for (var i in traducciones) {
-            if (traducciones.hasOwnProperty(i)) {
-                textos.push(traducciones[i]);
-            }
+        for (var texto of Object.values(traducciones)) {
+            textos.push(texto);
         }
         mostrarTexto();
     });
@@ -30,7 +28,7 @@ function avanzar() {
 
 function retroceder() {
     if (posicionActual > 0) {
-        posicionActual--;
+        posicionActual += 2;
         mostrarTexto();
     }
 }
