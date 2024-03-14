@@ -12,6 +12,33 @@
         "perder": "BUM!!, YOU LOSE",
         "reinicio": "SHOW",
         "reinicio2": "RESET"
+    },
+    "fr": {
+        "titulo": "DEMINEUR",
+        "vidas": "vies: ",
+        "perder": "BUM!!, TU AS PERDU",
+        "reinicio": "MONTRER",
+        "reinicio2": "RÉINITIALISER"
+    },
+    "de": {
+        "titulo": "MINENFELD",
+        "vidas": "leben: ",
+        "perder": "BUM!!, DU HAST VERLOREN",
+        "reinicio": "ZEIGEN",
+        "reinicio2": "ZURÜCKSETZEN"
+    },
+    "it": {
+        "titulo": "CAMPO MINATO",
+        "vidas": "vite: ",
+        "perder": "BUM!!, HAI PERSO",
+        "reinicio": "MOSTRA",
+        "reinicio2": "REIMPOSTA"
+    },
+    "is": {
+        "titulo": "MÍNUSPILARI",
+        "vidas": "líf: ",
+        "perder": "BUM!!, ÞÚ TAPAR",
+        "reinicio": "SÝNA",
+        "reinicio2": "ENDURBYRJA"
     }
-
 }

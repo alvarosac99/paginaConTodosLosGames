@@ -15,7 +15,6 @@
         "ganar": "GANASTE",
         "volverAJugar": "FIN DE LA PARTIDA | ¿Volver a jugar?",
         "pregunta": "Al mejor de cuanto?"
-
     },
     "en": {
         "titulo": "ROCK, PAPER, SCISSORS, LIZARD, SPOCK",
@@ -33,5 +32,73 @@
         "ganar": "YOU WIN",
         "volverAJugar": "GAME OVER | Play again?",
         "pregunta": "At best?"
+    },
+    "fr": {
+        "titulo": "PIERRE, PAPIER, CISEAUX, LEZARD, SPOCK",
+        "jugada": "Sélectionnez votre coup: ",
+        "enviar": "JOUEZ",
+        "resultado": "Sélectionnez un coup et allez: ",
+        "resultado2": "sélectionnez: ",
+        "tu": "VOUS",
+        "piedra": "pierre",
+        "papel": "papier",
+        "tijeras": "ciseaux",
+        "lagarto": "lézard",
+        "empate": "ÉGALITÉ",
+        "perder": "VOUS AVEZ PERDU",
+        "ganar": "VOUS AVEZ GAGNÉ",
+        "volverAJugar": "FIN DE LA PARTIE | Jouer à nouveau?",
+        "pregunta": "Le meilleur de combien?"
+    },
+    "de": {
+        "titulo": "STEIN, PAPIER, SCHERE, EIDECHSE, SPOCK",
+        "jugada": "Wähle deinen Zug: ",
+        "enviar": "SPIELEN",
+        "resultado": "Wähle einen Zug und los geht's: ",
+        "resultado2": "auswählen: ",
+        "tu": "DU",
+        "piedra": "stein",
+        "papel": "papier",
+        "tijeras": "schere",
+        "lagarto": "eidechse",
+        "empate": "UNENTSCHIEDEN",
+        "perder": "DU HAST VERLOREN",
+        "ganar": "DU HAST GEWONNEN",
+        "volverAJugar": "SPIELEN | Nochmal spielen?",
+        "pregunta": "Am besten von wie viel?"
+    },
+    "it": {
+        "titulo": "ROCCIA, CARTA, FORBICI, LUCERTOLA, SPOCK",
+        "jugada": "Seleziona la tua mossa: ",
+        "enviar": "GIOCA",
+        "resultado": "Seleziona una mossa e vai: ",
+        "resultado2": "seleziona: ",
+        "tu": "TU",
+        "piedra": "roccia",
+        "papel": "carta",
+        "tijeras": "forbici",
+        "lagarto": "lucertola",
+        "empate": "PAREGGIO",
+        "perder": "HAI PERSO",
+        "ganar": "HAI VINTO",
+        "volverAJugar": "FINE PARTITA | Giocare di nuovo?",
+        "pregunta": "Il meglio di quanto?"
+    },
+    "is": {
+        "titulo": "STEINN, PAPPÍR, SKOÐUN, LAGUR, SPOCK",
+        "jugada": "Veldu leik: ",
+        "enviar": "LEIKJA",
+        "resultado": "Veldu leik og farðu: ",
+        "resultado2": "velja: ",
+        "tu": "ÞÚ",
+        "piedra": "steinn",
+        "papel": "pappír",
+        "tijeras": "sköðun",
+        "lagarto": "lagur",
+        "empate": "JAFNT",
+        "perder": "ÞÚ TAPAR",
+        "ganar": "ÞÚ VINST",
+        "volverAJugar": "LEIK LOKIÐ | Spila aftur?",
+        "pregunta": "Bestur úr hve mörgum?"
     }
 }
