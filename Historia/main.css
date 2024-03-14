@@ -1,0 +1,80 @@
+body {
+    font-size: xx-large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif, 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
+    user-select: none;
+
+}
+
+.hola {
+    color: #2b2469;
+    background-color: #ffffff21;
+}
+
+.textoCentro {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    word-wrap: break-word;
+    text-align: center;
+    color: #18063a;
+}
+
+.textoCentro h3 {
+    text-align: center;
+}
+
+.botonIzquierda {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.botonDerecha {
+    position: absolute;
+    top: 90%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.jovani{
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+
+.boton {
+    min-width: 200px;
+    height: 50px;
+    color: #fff;
+    margin: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #3c338c;
+    box-shadow: 0 5px #2c0b8e;
+}
+
+.boton:hover {
+    box-shadow: 0 3px #2c0b8e;
+    top: 1px;
+}
+
+.boton:active {
+    box-shadow: 0 0 #2c0b8e;
+    top: 5px;
+    background: #2c0b8e;
+}
